@@ -1,5 +1,5 @@
-### PREMIER PROJET
+## PREMIER PROJET
 
-## CALCULATRICE
+### CALCULATRICE
 
 - Calculatrice développée avec le langage Javascript
