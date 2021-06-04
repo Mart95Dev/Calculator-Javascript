@@ -14,9 +14,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .calculate {
+  margin-top: 20px;
   background-color: rgb(124, 124, 124);
   display: flex;
   flex-direction: column;
@@ -34,11 +36,13 @@ body {
   height: 100px;
   border-radius: 5px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-end;
   background-color: rgb(205, 241, 179);
   margin-bottom: 10px;
   font-size: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 img {
@@ -47,10 +51,22 @@ img {
   display: flex;
   justify-content: flex-start;
   transform: translateY(-50%);
-  visibility: visible;
 }
 
-.danger-active {
+.alert-title {
+  color: white;
+  visibility: hidden;
+}
+.alert-text {
+  color: white;
+  visibility: hidden;
+}
+
+.danger-off {
+  visibility: hidden;
+}
+
+.danger-on {
   visibility: visible;
 }
 
