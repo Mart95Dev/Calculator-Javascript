@@ -1,0 +1,22 @@
+{
+  "name": "calculatrice",
+  "version": "1.0.0",
+  "description": "Premier projet avec Javascript",
+  "main": "script2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mart95Dev/Calculator-Javascript.git"
+  },
+  "author": "Martial Wehrling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mart95Dev/Calculator-Javascript/issues"
+  },
+  "homepage": "https://github.com/Mart95Dev/Calculator-Javascript#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
