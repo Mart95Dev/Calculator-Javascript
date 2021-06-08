@@ -4,6 +4,7 @@
   "description": "Premier projet avec Javascript",
   "main": "script2.js",
   "scripts": {
+    "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

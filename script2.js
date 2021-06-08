@@ -6,6 +6,8 @@ const alertTitle = document.querySelector('.alert-title');
 const textAlert = document.querySelector('.alert-text');
 let touchs = [];
 let symbols = [0];
+let deleteCharacter = '';
+let previousScreenResult = '';
 
 buttons.forEach(function (button) {
   // calculator key
@@ -28,6 +30,13 @@ buttons.forEach(function (button) {
       case ')':
         symbols.push(1);
         break;
+      case 'ce':
+        key = '';
+        touchs.pop();
+        previousScreenResult = screenResult.textContent;
+        deleteCharacter = previousScreenResult.slice(0, -1);
+        screenResult.textContent = deleteCharacter;
+        break;
       default:
         touchs.push(parseInt(key));
     }
@@ -44,9 +53,13 @@ buttons.forEach(function (button) {
 // display result or display error
 equal.addEventListener('click', () => {
   // test error operator result
+  if (touchs.length === 0) {
+    danger();
+    return;
+  }
+
   for (let i = 0; i < touchs.length; i++) {
     let character = touchs.slice(-1);
-
     if (isNaN(character)) {
       danger();
       break;
@@ -55,7 +68,6 @@ equal.addEventListener('click', () => {
     // check error symbols calculator
     const add = (accumulator, value) => accumulator + value;
     const symbol = symbols.reduce(add);
-
     if (symbol % 2 > 0) {
       danger();
       break;
